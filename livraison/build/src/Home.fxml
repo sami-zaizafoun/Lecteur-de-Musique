@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.HomeController">
+   <children>
+      <AnchorPane prefHeight="535.0" prefWidth="377.0" style="-fx-background-color: #5AB0E2; -fx-background-radius: 0.5em;">
+         <children>
+            <Pane layoutY="393.0" prefHeight="142.0" prefWidth="377.0">
+               <children>
+                  <ToggleButton layoutX="163.0" layoutY="45.0" mnemonicParsing="false" onAction="#play_pause" style="-fx-background-radius: 10em; -fx-border-radius: 10em; -fx-border-color: #ffffff; -fx-min-height: 50px; -fx-background-color: #2B3C50; -fx-min-height: 20px; -fx-min-width: 20px;" text="   " textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </ToggleButton>
+                  <Button layoutX="191.0" layoutY="96.0" mnemonicParsing="false" onAction="#stop" prefHeight="40.0" prefWidth="49.0" style="-fx-background-color: 0;" text="◼" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="132.0" layoutY="90.0" mnemonicParsing="false" onAction="#restart" style="-fx-background-color: 0;" text="⟲" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="volIcon" layoutX="14.0" layoutY="98.0" minHeight="16" minWidth="30.0" prefHeight="40.0" prefWidth="36.0" text="🔊" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="volumeSlider" layoutX="44.0" layoutY="107.0" onMouseClicked="#volume" onMouseDragged="#volume" prefHeight="23.0" prefWidth="73.0" showTickMarks="true" snapToTicks="true" value="100.0">
+                     <padding>
+                        <Insets top="4.0" />
+                     </padding></Slider>
+                  <Button layoutX="222.0" layoutY="47.0" mnemonicParsing="false" onAction="#next" style="-fx-background-color: #2B3C50; -fx-border-color: #ffffff; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="⏭" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="109.0" layoutY="47.0" mnemonicParsing="false" onAction="#previous" style="-fx-background-color: #2B3C50; -fx-border-color: #ffffff; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="⏮" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="pa" layoutX="176.0" layoutY="45.0" opacity="0.0" prefHeight="8.0" prefWidth="46.0" text="⏸" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="-10.0" left="-2.0" top="1.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="pl" layoutX="181.0" layoutY="28.0" prefHeight="60.0" prefWidth="36.0" text="▶ " textFill="WHITE">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                     <padding>
+                        <Insets top="13.0" />
+                     </padding>
+                  </Label>
+                  <Button layoutX="163.0" layoutY="46.0" mnemonicParsing="false" onAction="#play_pause" opacity="0.0" prefHeight="48.0" prefWidth="52.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="timeLine" layoutX="323.0" layoutY="6.0" text="00:00" />
+                  <Button fx:id="mute" layoutX="18.0" layoutY="106.0" mnemonicParsing="false" onAction="#mute" opacity="0.0" prefHeight="25.0" prefWidth="16.0" text="Button" />
+                  <Slider fx:id="seekSlider" layoutX="18.0" layoutY="21.0" onMouseClicked="#avance" onMouseDragged="#avance" prefHeight="0.0" prefWidth="340.0" style="-fx-minor-tick-count: #2B3C50;" />
+                  <Label alignment="CENTER" layoutX="339.0" layoutY="104.0" prefHeight="23.0" prefWidth="24.0" text="∞" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lLoop" layoutX="346.0" layoutY="125.0" text="Off" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="aloop" layoutX="336.0" layoutY="111.0" mnemonicParsing="false" onAction="#loop" opacity="0.0" prefHeight="32.0" prefWidth="28.0" text="Button" />
+               </children>
+            </Pane>
+            <TabPane fx:id="tab" prefHeight="388.0" prefWidth="377.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="PlayList">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="377.0">
+                           <children>
+                              <TabPane prefHeight="359.0" prefWidth="377.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="All songs">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="390.0">
+                                             <children>
+                                                <TableView fx:id="Plist" onMouseClicked="#listChoice" prefHeight="335.0" prefWidth="350.0" tableMenuButtonVisible="true">
+                                                   <columns>
+                                                      <TableColumn fx:id="tTitle" editable="false" text="Title" />
+                                                      <TableColumn fx:id="tArtist" editable="false" prefWidth="81.0" text="Artist" />
+                                                      <TableColumn fx:id="tAlbum" editable="false" minWidth="2.0" prefWidth="113.0" text="Album" />
+                                                      <TableColumn fx:id="tDuration" editable="false" minWidth="0.0" prefWidth="63.0" text="Duration" />
+                                                   </columns>
+                                                </TableView>
+                                                <Button layoutY="333.0" mnemonicParsing="false" onAction="#addFavorits" prefHeight="25.0" prefWidth="348.0" text="Add to Favorits" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Favorits">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="PlistFav" onMouseClicked="#listChoiceFav" prefHeight="336.0" prefWidth="349.0" tableMenuButtonVisible="true">
+                                                  <columns>
+                                                    <TableColumn fx:id="tTitleFav" text="Title" />
+                                                    <TableColumn fx:id="tArtistFav" prefWidth="81.0" text="Artist" />
+                                                      <TableColumn fx:id="tAlbumFav" prefWidth="113.0" text="Album" />
+                                                      <TableColumn fx:id="tDurationFav" prefWidth="63.0" text="Duration" />
+                                                  </columns>
+                                                </TableView>
+                                                <Button layoutY="333.0" mnemonicParsing="false" onAction="#removeFavorits" prefHeight="25.0" prefWidth="348.0" text="Remove from Favorits" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Viewer">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="artist" alignment="CENTER" layoutX="166.0" layoutY="24.0" prefHeight="29.0" prefWidth="105.0" text="Artist" textAlignment="CENTER" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="92.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="title" alignment="CENTER" layoutX="92.0" prefHeight="38.0" prefWidth="193.0" text="Title" textAlignment="CENTER" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="92.0">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="cover" fitHeight="263.0" fitWidth="276.0" layoutX="57.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="59.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Lyrics">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="lyrics" editable="false" prefHeight="359.0" prefWidth="377.0" styleClass="centeredTextArea" stylesheets="@../style/style.css">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font></TextArea>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+      <Box layoutX="-349.0" layoutY="95.0" />
+   </children>
+</AnchorPane>
