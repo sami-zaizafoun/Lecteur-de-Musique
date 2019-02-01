@@ -1,2 +1,3 @@
-# Lecteur-de-Musique
-Projet L2 Lecteur de musique avancé
+# Projet L2 Lecteur de musique avancé
+
+Le but de ce projet est la réalisation d'un lecteur de musique augmenté. Les fonctions élémentaires d'un tel logiciel sont la lecteur de pistes, d'albums ou de playlists et la gestion d'une bibliothèque stockée localement. Ce lecteur sera augmenté par des fonctionnalités améliorant l'expérience utilisateur comme par exemple : la création de playlists à contraintes (imposer un style, limiter les répétitions, etc.), l'utilisation de service externes (last.fm, Wikipedia, etc.) et la gestion de statistiques d'écoute (nombres d'écoutes, dernières écoutes, durées des écoutes, etc.)
